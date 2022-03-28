@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index(TRENDIT)</title>
+    <link rel="stylesheet" href="./dist/jquery.fullpage.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link
+      rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+    <style>
+    /* header */
+        header{ width: 100%; height: 80px; 
+            top: -10px; left:0; position:fixed; background-color: white; 
+            display: flex; 
+            z-index: 99; font-family: "Jost Regular";
+        }
+        .header{width: 1920px; margin: auto; display: flex;}
+        #fullpage{width: 1920px; margin: auto;}
+        header h1{font-size: 0%; margin: 25px;}
+        
+        header ul{ display: flex;  list-style: none; font-size: 16px; justify-content: center;
+           margin-left: -450px;}
+        .lnb{ height: 30px; }
+        .lnb>ul>li{display: flex; }
+        .Menu{top: -70px;}
+        .Menu a{ display: block; padding: 40px;
+                background-image: url(./img/line_sua.gif);
+                background-repeat: no-repeat;
+                background-position: right 43px;}
+        .Menu li>p{background-image: url(./img/line_sua.gif);
+                background-repeat: no-repeat;
+                background-position: left 43px;
+            }
+        
+        header a:hover{ font-family: "Jost ExtraBold"; }
+     
+        header a{ display: block; padding: 1em; }
+        
+        .lnb>ul>li>a{ display: block;}
+        .lnb>ul>li:nth-child(4){position: relative;}
+        .lnb>ul>li:nth-child(4):hover .subMenu{display: block;}
+        .subMenu{text-align: center; display: none; position: absolute; z-index: 99; left: 450px; top:70px;
+                     width: 115px; background-color: #fff; 
+        }
+        .subMenu a{  display: block; text-align: center;
+                    border-bottom: 1px solid black; 
+                    background-image: none; padding: 10px;           
+                }
+        .subMenu a:hover{font-family: "Jost ExtraBold"; }
+
+        .Login{ display: block; margin-left: 1600px; width: 300px;}
+
+        .Login li{font-weight: 900; font-size: 12px; }
+        .Login li:hover{font-family: "Jost Medium"; border-bottom: 1px solid black;
+                }
+     /* hamburger */
+     .hamburger{ display:none; transform:scale(0.8);
+          /* height: 50px; width:50px;
+          position: absolute; top: 100px; left:100px;  */
+    }
+     .hamburger .line {
+            width: 40px;
+            height: 5px;
+            background-color: black;
+            display: block;
+            margin: 8px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+
+          }
+
+          .hamburger:hover {
+            cursor: pointer;
+            
+          }
+
+          #hamburger-5.is-active {
+             
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform:scale(0.8) rotate(90deg);
+          }
+
+          #hamburger-5.is-active .line:nth-child(2) {
+            -webkit-transition: none;
+            -o-transition: none;
+            transition: none;
+          }
+
+          #hamburger-5 .line:nth-child(2) {
+            -webkit-transition-delay: 0.3s;
+            -o-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+          }
+
+          #hamburger-5.is-active .line:nth-child(2) {
+            opacity: 0;
+          }
+
+          #hamburger-5.is-active .line:nth-child(1),
+          #hamburger-5.is-active .line:nth-child(3) {
+            width: 35px;
+            -webkit-transform-origin: right;
+            -moz-transform-origin: right;
+            -ms-transform-origin: right;
+            -o-transform-origin: right;
+            transform-origin: right;
+          }
+
+          #hamburger-5.is-active .line:nth-child(1) {
+            -webkit-transform: translateY(15px) rotate(45deg);
+            -ms-transform: translateY(15px) rotate(45deg);
+            -o-transform: translateY(15px) rotate(45deg);
+            transform: translateY(15px) rotate(45deg);
+          }
+
+          #hamburger-5.is-active .line:nth-child(3) {
+            -webkit-transform: translateY(-15px) rotate(-45deg);
+            -ms-transform: translateY(-15px) rotate(-45deg);
+            -o-transform: translateY(-15px) rotate(-45deg);
+            transform: translateY(-15px) rotate(-45deg);
+          }
+
+
+    /* section */
+        .section{width: 100%; justify-content: center center; }
+        .section h1{font-size: 130px;  margin-top: 50px; margin-left: 660px; font-family: "Jost Regular";  }
+        .section h3{font-size: 140px; margin-top: -60px; margin-left: 350px; font-family: "Jost Regular";}
+        .Video{width: 40%; border: 1px solid black;  margin-top: -55px; margin-left: 530px; }
+
+        .section:nth-child(1){background-image: url(./img/background_1.jpg);
+                                background-repeat: no-repeat;
+                             background-position: 30px;}
+        .Part{margin-top: 40px;}
+        
+
+    /* section:nth-child(2)  NEW */
+        .content{display: flex;}
+        .content h3{font-size: 50px; color: white;
+          background-image: url(./img/arrow_L.png);
+          background-repeat: no-repeat; background-size: 20%; 
+          margin-top: 200px; margin-left: -230px;}
+        .NEW{display: flex; }
+        .NEW h4{margin-left: 15px; margin-top: 150px; font-size: 40px; font-family: "Jost Bold";}
+        .NEW h4:hover{font-family: "Jost Bold"; opacity: 0.5; transform: scale(0.98);}
+        .NEW h1{margin-left: 20%; font-size: 120px;}
+        .NEW h2{width: 350px; height:7px; background-color: black; margin-top:180px;}
+            
+    /* swiper slide design */
+        .swiper {
+        width: 100%;
+        height: 60%;
+        margin-left: -250px;
+      }
+      .swiper-wrapper{
+        width: 100%;
+        margin-top: 10px;
+        height: 660px;
+      }
+      .swiper-slide {
+        height: 80%;
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        margin-top: -10px;
+        display: flex;  
+        justify-content: center;
+        align-items: center;
+      }
+      .swiper-slide a{
+          font-family:"NotoSansCJKkr Light";
+          font-size: 15px;
+      }
+      .swiper-slide b{color: red;}
+      .swiper-slide img {
+        display: block;
+        width: 300px;
+        height: 445px;   
+        border: 1px solid black;
+      }
+      .swiper-pagination{margin-bottom:95px; margin-left: 350px;}
+      .mySwiper{display: flex;}
+     
+    /* section:nth-child(3)  SALE */
+        .SALE{display: flex;}
+        .SALE h4{margin-left: 15px; margin-top: 150px; font-size: 40px; 
+            font-family: "Jost Bold";
+            color: #9a0202;
+        }
+        .SALE h4:hover{font-family: "Jost Bold"; opacity: 0.5; transform: scale(0.98);}
+        .SALE h1{margin-left: 20%; font-size: 120px; color: #9a0202;}
+        .SALE h2{width: 350px; height:7px; background-color: #9a0202; margin-top:175px;}
+
+    /* section:nth-child(4)  ITEM */
+        .ITEM{display: flex;}
+        .ITEM h4{margin-left: 15px; margin-top: 150px; font-size: 40px; font-family: "Jost Bold";}
+        .ITEM h4:hover{font-family: "Jost Bold"; opacity: 0.5; transform: scale(0.98);}
+        .ITEM h1{margin-left: 20%; font-size: 120px; }
+        .ITEM h2{width: 350px; height:7px; background-color: black; margin-top:180px;}
+
+
+      /* ABOUT */
+        .ABOUTcontent{display: flex;}
+        .ABOUT{margin-top: -60px;}
+        .ABOUT_h{display: flex;}
+        .ABOUT h1{margin-left: 20%; margin-top: 60px; font-size: 120px;}
+        .ABOUT h2{width: 350px; height:7px; background-color: black; margin-top:180px;}
+        .ABOUT h3{margin-left:30px;margin-top: 50px; font-size: 60px; display:block;}
+        .ABOUT h3:hover{ transform: scale(0.98);}
+        .ABOUT h3 b{font-family: "Jost black"; font-size: 70px; line-height: 5px;}
+        .ABOUT h3 b:hover{color:#1b95e9;}
+        .ABOUT h4{display: none;}
+        .Video2{width: 45%; border: 1px solid black;  margin-top: 15px; margin-left: 370px; }   
+      
+      /* NOTICE */  
+          .Notice{display: flex;
+            width: 100%;
+            margin-top: 10px;
+            height: 660px;
+            margin-left: 400px;
+            }
+          .NOTICE_h{display: flex;}
+          .NOTICE h1{margin-left: 20%; font-size: 120px;}
+          .NOTICE h2{width: 350px; height:7px; background-color: black; margin-top:180px;}
+          .NOTICE h4{margin-left: 15px; margin-top: 150px; font-size: 40px; font-family: "Jost Bold";}
+          .NOTICE h4:hover{font-family: "Jost Bold"; opacity: 0.5;
+          transform: scale(0.99);
+          }
+          .notice img{
+          display: block;
+          width: 400px;
+          height: 400px;   
+          border: 1px solid black;
+          }
+          .notice img:hover{transform: scale(0.97);}
+          /* .notice:nth-child(1) img:hover{opacity: 0.5; 
+          background-image: url(./img/notice1_h.jpg); z-index: 99;} */
+          .notice{text-align: center; margin-right: 20px; margin-top: 20px;}
+          .notice:nth-child(4){display: none;}
+      
+         /* EVENT */  
+         .Event{display: flex;
+            width: 100%;
+            margin-top: 10px;
+            height: 660px;
+            margin-left: 400px;
+          }
+          .EVENT_h{display: flex;}
+          .EVENT h1{margin-left: 20%; font-size: 120px;}
+          .EVENT h2{width: 350px; height:7px; background-color: black; margin-top:180px;}
+          .EVENT h4{margin-left: 15px; margin-top: 150px; font-size: 40px; font-family: "Jost Bold";}
+          .EVENT h4:hover{font-family: "Jost Bold"; opacity: 0.5;
+          transform: scale(0.99);
+          }
+          .event img{
+            display: block;
+            width: 400px;
+            height: 400px;   
+            border: 1px solid black;
+          }
+          .event img:hover{transform: scale(0.97);}
+          .event{text-align: center; margin-right: 20px; margin-top: 20px;}
+          .event:nth-child(4){display: none;}
+      
+      /* footer */
+          .footer{ width: 100%;
+            background-color: black;}
+
+
+
+      @media screen and (max-width:1050px){
+        /* header */
+            .header h1{display: none;}
+            header ul{ display: flex;  list-style: none; font-size: 16px; justify-content: center;
+            margin-left:-210px;}
+            .subMenu{text-align: center; display: none; position: absolute; 
+              z-index: 99; left: 213px; top:70px; width: 110px; background-color: #fff; 
+        }
+        .Login{ display: block; margin-left: 950px; width: 300px;}
+
+        .Login li{font-weight: 900; font-size: 12px; }
+        
+         /* section */
+         .section{width: 100%; justify-content: center center; }
+        .section h1{font-size: 100px;  margin-top: 0px; margin-left: 330px; font-family: "Jost Regular"; margin-bottom: 30px;}
+        .section h3{font-size: 100px; margin-top: -20px; margin-left: 100px; font-family: "Jost Regular";}
+        .Video{width: 30%; border: 1px solid black;  margin-top: -55px; margin-left: 230px; }
+
+        .section:nth-child(1){background-image: none;}
+
+         /* section:nth-child(2)  NEW */
+         .content{display: flex;}
+        .NEW h4{ margin-left: -180px; margin-top: 120px; font-size: 40px; font-family: "Jost Bold";
+             background-image: url(./img/arrow_R.png); 
+             width: 300px;
+             background-repeat: no-repeat; background-size: 8%; background-position: 165px 18px;}
+        
+        .NEW h1{margin-top:40px; margin-left: 5%; font-size: 120px;}
+        .swiper {
+        width: 100%;
+        height: 60%;
+        margin-left: -630px;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 270px;
+        height: 420px;   
+        border: 1px solid black;
+        margin: -10px;
+      }
+       /* section:nth-child(3)  SALE */
+        .SALE h4{margin-left: -180px; margin-top: 115px; font-size: 40px; z-index: 99; font-family: "Jost Bold";
+             background-image: url(./img/arrow_sale_R.png); 
+             width: 300px;
+             background-repeat: no-repeat; background-size: 8%; background-position: 165px 18px;
+            
+        }
+        .SALE h1{margin-top:40px; margin-left: 5%; font-size: 120px; }
+
+    /* section:nth-child(4)  ITEM */
+        .ITEM h4{margin-left: -180px; margin-top: 120px; font-size: 40px; z-index: 99; 
+            font-family: "Jost Bold";
+            background-image: url(./img/arrow_R.png); 
+             width: 300px;
+             background-repeat: no-repeat; background-size: 8%; background-position: 165px 18px;
+            color: black;
+          }
+        .ITEM h1{margin-top:40px; margin-left: 5%; font-size: 120px; }
+
+      /* ABOUT */
+        .About{display: flex;}
+        .ABOUT h1{margin-top:40px; margin-left: 5%; font-size: 120px; }
+        .ABOUT h3{margin-left:15px; margin-top: 50px; font-size: 40px; display:block; line-height: 55px; font-family:"Jost bold";}
+        .ABOUT h3 b{font-family: "Jost black"; font-size: 50px; margin-top: 30px;line-height: 15px; }
+        .Video2{width: 30%; border: 1px solid black;  margin-top: 5px; margin-left: 130px; }   
+      
+        /* NOTICE */  
+          .Notice{
+            margin-left: 130px;
+            }
+          .NOTICE h1{margin-top:100px; margin-left:5%; font-size: 120px;}
+          .NOTICE h2{margin-top: 220px;}
+          .NOTICE h4{margin-left: -180px; margin-top: 160px; font-size: 40px; z-index: 99; 
+            font-family: "Jost Bold";
+            background-image: url(./img/arrow_R.png); 
+             width: 300px;
+             background-repeat: no-repeat; background-size: 8%; background-position: 165px 18px;
+            color: black;
+          }
+          .notice:nth-child(3){display: none;}
+
+          .notice{  margin-right: 20px; margin-top: 20px;}
+      
+        /* EVENT */  
+          .Event{
+            margin-left: 130px;
+          }
+          .EVENT h1{margin-top:100px; margin-left:5%; font-size: 120px;}
+          .EVENT h2{margin-top: 220px;}
+          .EVENT h4{margin-left: -180px; margin-top: 160px; font-size: 40px; z-index: 99; 
+            font-family: "Jost Bold";
+            background-image: url(./img/arrow_R.png); 
+             width: 300px;
+             background-repeat: no-repeat; background-size: 8%; background-position: 165px 18px;
+            color: black;
+          }
+          .event{margin-right: 20px; margin-top: 20px;}
+          .event:nth-child(3){display: none;}
+
+      }
+      @media screen and (max-width:600px){
+
+          /* header */
+            .header h1{display: none;}
+              header ul{ display: flex;  list-style: none; font-size: 16px; justify-content: center;
+              margin-left:-210px;}
+              
+            .Login{  margin-left: 500px; width: 80px;
+                margin-top: -50px;line-height: 5px;}
+            .Login li{ font-weight: 900; font-size: 12px; }
+            header ul{ display: flex;  list-style: none; font-size: 16px; justify-content: center;
+            margin-left:-10px; flex-direction: column;
+            margin-top: 100px; text-align: center;}
+           .Menu{display: none; background-color: #fff; width: 130px;}
+           .Menu a{background-image: none;  padding:5px; 
+            margin-left: 26px; text-align: center;
+            /*  */  background: opacity(0.5);
+            border-radius: 5px; 
+            }
+            .Menu a:nth-child(1){padding-top: 0;}
+            .Menu span{ position: relative; z-index: 99999; display: block; text-align: center; width:90px;}
+            .subMenu{ margin-left: -80px; margin-top: -70px; background-color: black; color: #fff;height: 110px; z-index: 99;}
+            .subMenu a{line-height: 15px; border: none; 
+              margin-left: 0px; margin-top: 5px;}
+            
+
+          /* hamburger */
+            .hamburger{display:block; 
+              margin-left: -450px;
+              margin-top: 30px;
+            
+           }
+
+          /* section */
+            .section h1{font-size: 70px;  margin-top: 0px; margin-left: 170px; 
+                font-family: "Jost Regular"; margin-bottom: 45px; }
+            .section h3{font-size: 55px; margin-top: -5px; margin-left: 62px; font-family: "Jost Regular";}
+            .Video{width: 25%; border: 1px solid black;  margin-top: -60px; margin-left: 65px; }
+      
+          /* section:nth-child(2)  NEW */
+            .content{display: flex;}
+            .NEW h1{margin-top: 30px; margin-left: 150px; font-size: 130px;}
+            .NEW h2{ width: 295px; margin-top: 185px; margin-left: -295px;}
+            .NEW h4{margin-left: -220px; margin-top: 190px; font-size: 30px; z-index: 99;
+             font-family: "Jost Bold"; background-image: url(./img/arrow_R.png); 
+             width: 150px;
+             background-repeat: no-repeat; background-size: 15%; background-position: 125px 11px;
+            }
+          
+            .swiper {
+            width: 100%;
+            height: 60%;
+            margin-left: -670px;
+            }
+     
+
+            .swiper-wrapper{
+            width: 100%;
+            margin-top: 5px;
+            height: 645px;
+            }
+            .swiper-pagination{margin-bottom:95px; margin-left: 0px;}
+
+          /* SALE */
+            .SALE h1{margin-top: 30px; margin-left: 150px; font-size: 130px;}
+            .SALE h2{ width: 280px; margin-top: 185px; margin-left: -285px;}
+            .SALE h4{margin-left: -210px; margin-top: 190px; font-size: 30px; z-index: 99;
+             font-family: "Jost Bold"; 
+             width: 150px;
+             background-repeat: no-repeat; background-size: 15%; background-position: 125px 11px;
+            }
+
+          /* ITEM */
+            .ITEM h1{margin-top: 30px; margin-left: 150px; font-size: 130px;}
+            .ITEM h2{ width: 265px; margin-top: 185px; margin-left: -265px;}
+            .ITEM h4{margin-left: -210px; margin-top: 190px; font-size: 30px; z-index: 99;
+             font-family: "Jost Bold"; 
+             width: 150px;
+             background-repeat: no-repeat; background-size: 15%; background-position: 125px 11px;
+            }
+
+          /* ABOUT */
+            .ABOUT h1{margin-top: 30px; margin-left: 130px; font-size: 110px;}
+            .ABOUT h2{ width: 345px; margin-top: 170px; margin-left: -345px;}
+            .ABOUTcontent{display: block;}
+            .ABOUT h4{margin-left:85px; margin-top: 20px; font-size: 30px; display:block; line-height: 45px; font-family:"Jost bold";
+            }
+            .ABOUT h4 b{font-family: "Jost black"; font-size: 35px; }
+            .ABOUT h4:hover{transform: scale(0.97);margin-left:65px;}
+            .ABOUT h4 b:hover{color:#1b95e9;}
+            .Video2{width: 25%; border: 1px solid black;  margin-top: 1px; margin-left: 70px; }  
+            .ABOUT h3{display: none;}
+            
+          /* NOTICE */
+            .NOTICE h1{margin-top: 100px; margin-left: 120px; font-size: 110px;}
+            .NOTICE h2{ width: 370px; margin-top: 240px; margin-left: -375px;}
+            .NOTICE h4{margin-left: -260px; margin-top: 250px; font-size: 30px; z-index: 99;
+             font-family: "Jost Bold"; 
+             width: 150px;
+             background-repeat: no-repeat; background-size: 15%; background-position: 125px 11px;
+            }
+            .notice img{
+              display: block;
+              width: 200px;
+              height: 200px;   
+              border: 1px solid black;
+              }
+              .notice{margin-right: 10px;}
+              .notice:nth-child(1){margin-left: -25px;}
+              .notice:nth-child(3){display:block;
+               margin-top: 290px; margin-left: -420px;}
+              .notice:nth-child(4){display: block;
+              margin-top: 290px; margin-left: 2px;}
+
+          /* EVENT */
+            .EVENT h1{margin-top: 100px; margin-left: 135px; font-size: 110px;}
+            .EVENT h2{ width: 310px; margin-top: 240px; margin-left: -325px;}
+            .EVENT h4{ margin-left: -225px; margin-top: 250px; font-size: 30px; z-index: 99;
+             font-family: "Jost Bold"; 
+             width: 150px;
+             background-repeat: no-repeat; background-size: 15%; background-position: 125px 11px;
+            }
+            .event img{
+            display: block;
+            width: 200px;
+            height: 200px;   
+            border: 1px solid black;
+            }
+            .event{margin-right: 10px;}
+            .event:nth-child(1){margin-left: -25px;}
+            .event:nth-child(3){display:block;
+               margin-top: 290px; margin-left: -420px;}
+            .event:nth-child(4){display: block;
+              margin-top: 290px; margin-left: 2px;}
+        }
+
+        @media screen and (max-width:480px){
+
+        }
+    </style>    
+</head>
+<body>
+    <header>
+            <div class="header">
+                <h1>TRENDIT<a href="#section1"><img src="./img/logo.png" alt="logo"></a></h1>             
+             <nav class="lnb">
+                <ul class="Menu">
+                    <li data-menuanchor='section1'><p><a href="#section1"><span>TRENDIT</span></p></a></li>
+                    <li data-menuanchor='section2'><a href="#section2"><span>NEW</span></a></li>
+                    <li data-menuanchor='section3'><a href="#section3"><span>SALE</span></a></li>
+                    <li data-menuanchor='section4'><a href="#section4"><span>ITEM</span></a>
+                        <ul class="subMenu">
+                            <li><a href="https://trenditstore.com/product/list.html?cate_no=25">TOP</a></li>
+                            <li><a href="https://trenditstore.com/product/list.html?cate_no=51">BOTTOM</a></li>
+                            <li><a href="https://trenditstore.com/product/list.html?cate_no=24">OUTER</a></li>
+                            <li><a href="https://trenditstore.com/category/bag/57/">BAG</a></li>
+                        </ul>
+                    </li>
+                    <li data-menuanchor='section5'><a href="#section5"><span>ABOUT</span></a></li>
+                    <li data-menuanchor='section6'><a href="#section6"><span>NOTICE</span></a></li>
+                    <li data-menuanchor='section7'><a href="#section7"><span>EVENT</span></a></li>
+                </ul>
+                
+                <div class="hamburger" id="hamburger-5">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </div>
+
+                
+                <ul class="Login">
+                    <li><a href="https://trenditstore.com/member/login.html">LOGIN</a></li>
+                    <li><a href="https://trenditstore.com/member/agreement.html">JOIN</a></li>
+                    <li><a href="https://trenditstore.com/order/basket.html">MY PAGE</a></li>
+                </ul>
+             </nav>
+            </div>
+    </header>
+    <!--메뉴로 이동-->
+    <div id="fullpage">
+        <div class="section">
+            <h1>TRENDIT</h1>
+            <video class="Video" controls="controls" autoplay>
+                <source src="./video/2021 TRENDIT SUMMER FILM.mp4" type="video/mp4">
+            </video>
+            <h3>FASHION DATA LAB</h3>
+        </div>
+        <div class="section">
+            <div class="Part">
+              <div class="NEW">
+                  <h1>NEW</h1>
+                  <h2></h2>
+                  <h4><a href="https://trenditstore.com/product/list.html?cate_no=23">more go</a></h4>
+              </div>
+              
+              <div class="content">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <a href="https://trenditstore.com/product/detail.html?product_no=2141&cate_no=23&display_group=1"><img src="./img/3.jpg" alt="">
+                            <br><b>new</b> 코듀로이 카라 퀄팅 패딩<br>
+                            <!-- <b>10%</b>  -->
+                            52,900원</a>
+                        </div>
+                      <div class="swiper-slide">
+                          <a href="https://trenditstore.com/product/detail.html?product_no=2137&cate_no=23&display_group=1"><img src="./img/1.jpg" alt="">
+                            <br><b>new</b>  케이블 훌 니트 원피스<br><b>20%</b>
+                              23,900원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=2106&cate_no=23&display_group=1"><img src="./img/2.jpg" alt="">
+                            <br><b>new</b>  울 체크 슬릿 서스펜더 원피스<br><b>10%</b> 
+                            99,900원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=2062&cate_no=23&display_group=1"><img src="./img/4.jpg" alt="">
+                            <br><b>new</b>  울 하운드투스 골드버튼 자켓<br>
+                            <b>10%</b> 67,900원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=2045&cate_no=23&display_group=1"><img src="./img/5.jpg" alt="">
+                            <br><b>new</b>  컬러 패턴 체크 가디건<br><b>10%</b> 23,900원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=2144&cate_no=23&display_group=1"><img src="./img/6.jpg" alt="">
+                            <br><b>new</b>  알파카 브러쉬 울가디건<br><b>10%</b> 61,900원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=2120&cate_no=23&display_group=1"><img src="./img/7.jpg" alt="">
+                            <br><b>new</b>  하운드투스 퍼프 크롭 니트<br>
+                            <b>10%</b> 28,900원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=2132&cate_no=23&display_group=1"><img src="./img/8.jpg" alt="">
+                            <br><b>new</b>  울ver.행거칩 테일러드 자켓<br>
+                            <b>10%</b> 61,900원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=2071&cate_no=23&display_group=1"><img src="./img/9.jpg" alt="">
+                            <br><b>new</b>  실키 벨티드 셔츠 원피스<br><b>10%</b> 49,800원</a>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <div>
+                    <h3> | </h3>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div class="section"> 
+            <div class="Part">
+              <div class="SALE">
+                  <h1>SALE</h1>
+                  <h2></h2>
+                  <h4><a href="https://trenditstore.com/product/list.html?cate_no=150">more go</a></h4>
+              </div>
+              
+              <div class="content">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <a href="https://trenditstore.com/product/detail.html?product_no=1378&cate_no=130&display_group=1"><img src="./img/01.jpg" alt="">
+                            <br><b>| MD PICK할인 |</b>  랩 버클 롱 원피스<br><b>23%</b> 55,120원</a>
+                        </div>
+                      <div class="swiper-slide">
+                          <a href="https://trenditstore.com/product/detail.html?product_no=1511&cate_no=130&display_group=1"><img src="./img/02.jpg" alt="">
+                            <br><b>SET SALE</b>  체크 가디건&스커트SET 투피스<br><b>25%</b> 29,800원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=1465&cate_no=130&display_group=1"><img src="./img/03.jpg" alt="">
+                            <br><b>SET SALE</b>  단가라 슬립set 니트 가디건<br><b>40%</b> 47,900원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=1250&cate_no=129&display_group=1"><img src="./img/04.jpg" alt="">
+                            <br><b>SALE</b>  트렌치 윙 벨티드 원피스<br><b>10%</b> 72,900원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=1249&cate_no=129&display_group=1"><img src="./img/05.jpg" alt="">
+                            <br><b>SALE</b>  더블 플레어 테일러드 원피스<br><b>10%</b> 66,900원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=1422&cate_no=129&display_group=1"><img src="./img/06.jpg" alt="">
+                            <br><b>SALE</b>  페이즐리 슬립SET 셔츠<br><b>10%</b> 23,900원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=1311&cate_no=129&display_group=1"><img src="./img/07.jpg" alt="">
+                            <br><b>SALE</b>  빅 포켓 서스펜더 훌 원피스<br><b>10%</b> 39,800원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=1260&cate_no=129&display_group=1"><img src="./img/08.jpg" alt="">
+                            <br><b>SALE</b>  튤립 이지 랩 투피스<br><b>10%</b> 21,900원</a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/detail.html?product_no=1048&cate_no=150&display_group=1"><img src="./img/09.jpg" alt="">
+                            <br><b>SALE</b>  랩 리본 롱 원피스<br><b>10%</b> 52,900원</a>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <div>
+                    <h3> | </h3>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+            <div class="Part">
+              <div class="ITEM">
+                  <h1>ITEM</h1>
+                  <h2></h2>
+                  <h4><a href="https://trenditstore.com/product/list.html?cate_no=45">more go</a></h4>
+              </div>
+              
+              <div class="content">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <a href="https://trenditstore.com/product/list.html?cate_no=25"><img src="./img/top.jpg" alt="">
+                            <br><b>TOP</b><br> 지금부터 봄까지 쭈욱- <br>
+                            <!-- <b>50%</b>  -->
+                            <b>10,000원대 - 50,000원대</b></a>
+                        </div>
+                      <div class="swiper-slide">
+                          <a href="https://trenditstore.com/product/list.html?cate_no=51"><img src="./img/bottom.jpg" alt="">
+                            <br><b>BOTTOM</b><br>  가벼운 레깅스부터 시크한 슬랙스까지 <br>
+                            <!-- <b>10%</b> -->
+                            <b>10,000원대 - 50,000원대</b></a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/product/list.html?cate_no=24"><img src="./img/outer.jpg" alt="">
+                            <br><b>OUTER</b><br>간절기 봄자켓부터 핸드메이드 롱코트까지<br>
+                            <!-- <b>10%</b>  -->
+                            <b>10,000원대 - 150,000원대</b></a>
+                        </div>
+                      <div class="swiper-slide">
+                        <a href="https://trenditstore.com/category/bag/57/"><img src="./img/bag.jpg" alt="">
+                            <br><b>NEW BAG</b><br>요즘 트렌디한 가방 보러가기<br>
+                            <!-- <b>12%</b> -->
+                             <b>8,000원대 ~ 50,000원대</b> </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <div>
+                    <h3> | </h3>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+            <div class="ABOUT">
+                <div class="ABOUT_h">
+                  <h1>ABOUT</h1>
+                  <h2></h2>
+                </div>
+
+                <div class="ABOUTcontent">
+                    <video class="Video2" controls="controls" autoplay>
+                        <source src="./video/trendit.mp4" type="video/mp4">
+                    </video>
+                    <h3><a href="https://trenditstore.com/about/">최신트렌드를<br>추천해주는<br><b>SHOP<br> TRENDIT</b><br>알아보러가기 ></a></h3>
+                    <h4><a href="https://trenditstore.com/about/">&nbsp;&nbsp;&nbsp; 최신트렌드를 추천해주는<br><b>SHOP TRENDIT</b>  보러가기 ></a></h4>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="NOTICE">
+              <div class="NOTICE_h">
+                <h1>NOTICE</h1>
+                <h2></h2>
+                <h4><a href="https://trenditstore.com/board/notice/1/">more go</a></h4>
+              </div>
+
+              <div class="Notice">
+                <div class="notice">
+                  <a href="https://trenditstore.com/article/notice/1/1334/"><img src="./img/notice1.jpg" alt="">
+                    <br><b>[공지]</b><br>트렌딧 멤버쉽 안내</a>
+                </div>
+                <div class="notice">
+                  <a href="https://trenditstore.com/article/notice/1/1238/"><img src="./img/notice2.jpg" alt="">
+                    <br><b>[공지]</b><br>적립금 사용법</a>
+                </div>
+                <div class="notice">
+                  <a href="https://trenditstore.com/article/notice/1/53/"><img src="./img/notice3.jpg" alt="">
+                    <br><b>[공지]</b><br>교환 및 반품 가이드</a>
+                </div>  
+                <div class="notice">
+                  <a href="https://trenditstore.com/article/notice/1/2128/"><img src="./img/notice4.jpg" alt="">
+                    <br><b>[공지]</b><br>추석연휴 배송안내</a>
+                </div>  
+            </div>
+            </div>
+
+          
+            
+        </div>
+        <div class="section">
+            <div class="EVENT">
+              <div class="EVENT_h">
+                <h1>EVENT</h1>
+                <h2></h2>
+                <h4><a href="https://trenditstore.com/board/event/8/">more go</a></h4>
+              </div>
+
+              <div class="Event">
+                <div class="event">
+                  <a href="https://trenditstore.com/article/event/8/1753/"><img src="./img/event1.png" alt="">
+                    <br><b>LAST WOW</b><br>최대 50% + 무료배송<br></a>
+                </div>
+                <div class="event">
+                  <a href="https://trenditstore.com/article/event/8/1552/"><img src="./img/event2.png" alt="">
+                    <br><b>PERFECT MEMBERSHIP</b><br>평생 무.료.배.송<br></a>
+                </div>
+                <div class="event">
+                  <a href="https://trenditstore.com/article/event/8/1569/"><img src="./img/event3.jpg" alt="">
+                    <br><b>WOW SUMMER!</b><br>1만원 즉시할인+멤버쉽 무료배송<br></a>
+                </div>
+                <div class="event">
+                  <a href="https://trenditstore.com/article/event/8/1551/"><img src="./img/event4.png" alt="">
+                    <br><b>APP 출시</b><br>트렌딧 앱 출시기념 이벤트<br></a>
+                </div>
+            </div>
+            <!-- footer -->
+            <div class="footer"></div>
+            <ul>
+              <li>트렌딧
+                <ul class="subMenu">
+                  <li><a herf="#"></a></li>
+                </ul>
+              </li>
+              <li>회사소개
+                <ul class="subMenu">
+                  <li><a herf="#">회사소개</a></li>
+                  <li><a herf="#">매장안내</a></li>
+                </ul>
+              </li>
+              <li>이용안내
+                <ul class="subMenu">
+                  <li><a herf="#">배송 및 반품</a></li>
+                  <li><a herf="#">회원혜택</a></li>
+                  <li><a herf="#">1:1 문의</a></li>
+                </ul>
+              </li>
+              <li>운영정책
+                <ul class="subMenu">
+                  <li><a herf="#">이용약관</a></li>
+                  <li><a herf="#">개인정보처리방침</a></li>
+                </ul>
+              </li>
+              <li>고객센터
+                <ul class="subMenu">
+                  <li>고객센터<br>
+                    AM 10:00 - PN 17:00<br>
+                    토요일, 일요일, 공휴일 휴무<br>
+                    02-2268-1152
+                  </li>
+                  <li><a herf="#">
+                    trendit_cs@urbanisom.com
+                  </a></li>
+                  <li>
+                    은행정보<br>
+                    하나은행 115-910049-78004<br>
+                    예금주 (주)어반데이터랩<br>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+
+        
+
+    
+     
+        </div>
+        <!-- <div class="section">
+          <h1>FOOTER</h1>
+      </div> -->
+    
+    <script src="./script/jquery-3.6.0.min.js"></script>
+    <script src="./dist/jquery.fullpage.js"></script>
+    <script src="./script/swiper-bundle.min.js"></script>
+  
+   <script>
+    $(function() {
+        $('#fullpage').fullpage({
+            autoScrolling:true,
+            scrollHorizontally: true,
+            navigation:true,
+            navigationPosition:'left',
+            anchors:['section1','section2','section3','section4','section5','section6','section7','section8'],
+            // fixed header 설정
+            //  특정하게 처리할일 생기면 
+        });
+    });
+
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5.5,
+        centeredSlides: true,
+        spaceBetween: 30,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+       },
+      });
+
+    // hamburger
+    $(document).ready(function(){
+    $(".hamburger").click(function(){
+    $(this).toggleClass("is-active");
+     });
+    });
+
+    // hamburger - click - menu
+    let toggle = false;
+    $('.hamburger').on('click',function(){
+    if(!toggle){
+        $(this).css({'margin-top': '-275px'})
+        $('.Menu').css({'display': 'block'})
+        toggle = true;
+    }else{
+       $(this).css({'margin-top': '30px'})
+        $('.Menu').css({'display': 'none'})
+        toggle = false;
+    }
+    })
+   
+
+   </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
