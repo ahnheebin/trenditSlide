@@ -268,8 +268,15 @@
           .event:nth-child(4){display: none;}
       
       /* footer */
-          .footer{ width: 100%;
-            background-color: black;}
+          .FOOTER{position: fixed; bottom:0px; z-index: 1000;
+            width: 2000px; height: 260px; background-color: black; opacity: 0.85; }
+          .footer{ color: #fff; margin-left: 300px;
+          padding:20px;}
+          .footer>ul>li>b{font-size: 15px;}
+          .footer>ul>li{margin-left: 120px;}
+          .footer>ul{display: flex;align-content: space-between;}
+          .submenu{ padding-top: 20px;}
+          .submenu>li {margin-bottom: 10px; line-height: 20px;}
 
 
 
@@ -371,6 +378,17 @@
           }
           .event{margin-right: 20px; margin-top: 20px;}
           .event:nth-child(3){display: none;}
+
+      /* footer */
+          .FOOTER{position: fixed; bottom:0px; z-index: 1000;
+            width: 2000px; height: 260px; background-color: black; opacity: 0.85; }
+          .footer{ color: #fff; margin-left: 5px;
+          padding:20px;}
+          .footer>ul>li>b{font-size: 15px;}
+          .footer>ul>li{margin-left:65px;}
+          .footer>ul{display: flex;align-content: space-between;}
+          .submenu{ padding-top: 20px;}
+          .submenu>li {margin-bottom: 10px; line-height: 20px;}
 
       }
       @media screen and (max-width:600px){
@@ -507,6 +525,18 @@
                margin-top: 290px; margin-left: -420px;}
             .event:nth-child(4){display: block;
               margin-top: 290px; margin-left: 2px;}
+
+              /* footer accordion*/
+          .FOOTER{position: fixed; bottom:0px; z-index: 1000;
+            width: 2000px; height: 260px; background-color: black; opacity: 0.85; }
+          .footer{ color: #fff; 
+          padding:20px;}
+          .footer>ul>li>b{font-size: 10px;}
+          .footer>ul>li{}
+          .footer>ul{display: block;align-content: space-between;}
+          .submenu{ padding-top: 20px;}
+          .submenu>li {margin-bottom: 10px; line-height: 20px;
+          font-size: 5px;}
         }
 
         @media screen and (max-width:480px){
@@ -766,9 +796,6 @@
                 </div>  
             </div>
             </div>
-
-          
-            
         </div>
         <div class="section">
             <div class="EVENT">
@@ -783,75 +810,88 @@
                   <a href="https://trenditstore.com/article/event/8/1753/"><img src="./img/event1.png" alt="">
                     <br><b>LAST WOW</b><br>최대 50% + 무료배송<br></a>
                 </div>
+
                 <div class="event">
                   <a href="https://trenditstore.com/article/event/8/1552/"><img src="./img/event2.png" alt="">
                     <br><b>PERFECT MEMBERSHIP</b><br>평생 무.료.배.송<br></a>
                 </div>
+
                 <div class="event">
                   <a href="https://trenditstore.com/article/event/8/1569/"><img src="./img/event3.jpg" alt="">
                     <br><b>WOW SUMMER!</b><br>1만원 즉시할인+멤버쉽 무료배송<br></a>
                 </div>
+
                 <div class="event">
                   <a href="https://trenditstore.com/article/event/8/1551/"><img src="./img/event4.png" alt="">
                     <br><b>APP 출시</b><br>트렌딧 앱 출시기념 이벤트<br></a>
                 </div>
+              </div>
             </div>
-            <!-- footer -->
-            <div class="footer"></div>
-            <ul>
-              <li>트렌딧
-                <ul class="subMenu">
-                  <li><a herf="#"></a></li>
-                </ul>
-              </li>
-              <li>회사소개
-                <ul class="subMenu">
-                  <li><a herf="#">회사소개</a></li>
-                  <li><a herf="#">매장안내</a></li>
-                </ul>
-              </li>
-              <li>이용안내
-                <ul class="subMenu">
-                  <li><a herf="#">배송 및 반품</a></li>
-                  <li><a herf="#">회원혜택</a></li>
-                  <li><a herf="#">1:1 문의</a></li>
-                </ul>
-              </li>
-              <li>운영정책
-                <ul class="subMenu">
-                  <li><a herf="#">이용약관</a></li>
-                  <li><a herf="#">개인정보처리방침</a></li>
-                </ul>
-              </li>
-              <li>고객센터
-                <ul class="subMenu">
-                  <li>고객센터<br>
-                    AM 10:00 - PN 17:00<br>
-                    토요일, 일요일, 공휴일 휴무<br>
-                    02-2268-1152
-                  </li>
-                  <li><a herf="#">
-                    trendit_cs@urbanisom.com
-                  </a></li>
-                  <li>
-                    은행정보<br>
-                    하나은행 115-910049-78004<br>
-                    예금주 (주)어반데이터랩<br>
-                  </li>
-                </ul>
-              </li>
-            </ul>
         </div>
-
+           <!-- footer -->
         
 
-    
-     
+      </div>
+      <div class="FOOTER">
+        <!-- <h1>FOOTER</h1> -->
+         <div class="footer">
+          <ul>
+            <li><b>| 트렌딧 |</b>
+              <ul class="submenu">
+                <li>(주)어반데이터랩<br>
+
+                  대전광역시 유성구 가정로 218 (가정동)<br>
+                  한국전자통신연구원 3층<br>
+                  
+                  사업자등록번호864-86-01386<br>
+                  사업자정보확인<br>
+                  
+                  통신판매번호2021-대전유성-0865<br>
+                  
+                  개인정보 관리 및 보호 책임<br>
+                  대표이사<br>
+                  </li>
+              </ul>
+            </li>
+            <li><b>| 회사소개 |</b>
+              <ul class="submenu">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">매장안내</a></li>
+              </ul>
+            </li>
+            <li><b>| 이용안내 |</b>
+              <ul class="submenu">
+                <li><a href="#">배송 및 반품</a></li>
+                <li><a href="#">회원혜택</a></li>
+                <li><a href="#">1:1 문의</a></li>
+              </ul>
+            </li>
+            <li><b>| 운영정책 |</b>
+              <ul class="submenu">
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+              </ul>
+            </li>
+            <li><b>| 고객센터 |</b>
+              <ul class="submenu">
+                <li>고객센터<br>
+                  AM 10:00 - PN 17:00<br>
+                  토요일, 일요일, 공휴일 휴무<br>
+                  02-2268-1152
+                </li>
+                <li><a href="#">
+                  trendit_cs@urbanisom.com
+                </a></li>
+                <li>
+                  은행정보<br>
+                  하나은행 115-910049-78004<br>
+                  예금주 (주)어반데이터랩<br>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <!-- <div class="section">
-          <h1>FOOTER</h1>
-      </div> -->
-    
+      </div>
     <script src="./script/jquery-3.6.0.min.js"></script>
     <script src="./dist/jquery.fullpage.js"></script>
     <script src="./script/swiper-bundle.min.js"></script>
@@ -901,7 +941,7 @@
     }
     })
    
-
+  
    </script>
 </body>
 </html>
