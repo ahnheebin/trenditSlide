@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <meta name="title" content="트렌딧 반응형 슬라이드사이트" />
+    <meta name="keywords" content="패션사이트" />
+    <meta name="description" content="반응형 패션사이트로 모바일과 아이패드화면에서도 맞춤형사이즈를 제공합니다." />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index(TRENDIT)</title>
-    <link rel="stylesheet" href="./dist/jquery.fullpage.css">
+    <link rel="shortcut icon" href="/img/trendit_pavicon.ico">
+    <!-- 파비콘 설정(크롬) -->
+    <link rel="icon" href="img/trendit_pavicon.ico">
+    <!-- 파비콘 설정(익스플로어) -->
+
+    <link rel="stylesheet" href="./css/jquery.fullPage.css">
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link
@@ -266,11 +274,15 @@
           .event img:hover{transform: scale(0.97);}
           .event{text-align: center; margin-right: 20px; margin-top: 20px;}
           .event:nth-child(4){display: none;}
-      
+
+      /* last page */
+      .section:nth-child(8){background-image: url(./img/background_1.jpg);
+                                background-repeat: no-repeat;
+                             background-position: 30px;}
       /* footer */
           .FOOTER{position: fixed; bottom:0px; z-index: 1000;
-            width: 2000px; height: 260px; background-color: black; opacity: 0.85; }
-          .footer{ color: #fff; margin-left: 300px;
+            width: 2000px; height: 300px; left: 0; bottom: -300px; background-color: black; opacity: 0.85; }
+          .footer{ color: #fff; margin-left: 250px;
           padding:20px;}
           .footer>ul>li>b{font-size: 15px;}
           .footer>ul>li{margin-left: 120px;}
@@ -380,12 +392,11 @@
           .event:nth-child(3){display: none;}
 
       /* footer */
-          .FOOTER{position: fixed; bottom:0px; z-index: 1000;
-            width: 2000px; height: 260px; background-color: black; opacity: 0.85; }
+          
           .footer{ color: #fff; margin-left: 5px;
           padding:20px;}
           .footer>ul>li>b{font-size: 15px;}
-          .footer>ul>li{margin-left:65px;}
+          .footer>ul>li{margin-left:50px;}
           .footer>ul{display: flex;align-content: space-between;}
           .submenu{ padding-top: 20px;}
           .submenu>li {margin-bottom: 10px; line-height: 20px;}
@@ -528,15 +539,18 @@
 
               /* footer accordion*/
           .FOOTER{position: fixed; bottom:0px; z-index: 1000;
-            width: 2000px; height: 260px; background-color: black; opacity: 0.85; }
+            width: 600px; height: 380px; left: 0; bottom: -380px;  background-color: black; }
           .footer{ color: #fff; 
-          padding:20px;}
-          .footer>ul>li>b{font-size: 10px;}
-          .footer>ul>li{}
-          .footer>ul{display: block;align-content: space-between;}
-          .submenu{ padding-top: 20px;}
-          .submenu>li {margin-bottom: 10px; line-height: 20px;
+          padding:20px; margin-left: -70px; text-align: center;}
+          .footer>ul>li>b{font-size: 15px; }
+          .footer>ul>li{margin-bottom: 15px;}
+          .footer>ul{display: block;align-content: space-between;
+          }
+          
+          .submenu{ padding-top: 10px;}
+          .submenu>li {margin-bottom: 10px; line-height: 15px;
           font-size: 5px;}
+        
         }
 
         @media screen and (max-width:480px){
@@ -829,14 +843,16 @@
             </div>
         </div>
            <!-- footer -->
-        
+        <div class="section">
+
+        </div>
 
       </div>
       <div class="FOOTER">
         <!-- <h1>FOOTER</h1> -->
          <div class="footer">
           <ul>
-            <li><b>| 트렌딧 |</b>
+            <li><b>|&nbsp; 트렌딧 &nbsp;|</b>
               <ul class="submenu">
                 <li>(주)어반데이터랩<br>
 
@@ -855,26 +871,26 @@
             </li>
             <li><b>| 회사소개 |</b>
               <ul class="submenu">
-                <li><a href="#">회사소개</a></li>
-                <li><a href="#">매장안내</a></li>
+                <li><a href="https://trenditstore.com/about/">회사소개</a></li>
+                <li><a href="https://trenditstore.com/stockist/list.html?board_no=5#none">매장안내</a></li>
               </ul>
             </li>
             <li><b>| 이용안내 |</b>
               <ul class="submenu">
-                <li><a href="#">배송 및 반품</a></li>
-                <li><a href="#">회원혜택</a></li>
+                <li><a href="https://trenditstore.com/help/delivery-returns.html#Delivery">배송 및 반품</a></li>
+                <li><a href="https://trenditstore.com/help/benefit.html">회원혜택</a></li>
                 <li><a href="#">1:1 문의</a></li>
               </ul>
             </li>
             <li><b>| 운영정책 |</b>
               <ul class="submenu">
-                <li><a href="#">이용약관</a></li>
-                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="https://trenditstore.com/legal/terms-of-use.html">이용약관</a></li>
+                <li><a href="https://trenditstore.com/legal/privacy-policy.html">개인정보처리방침</a></li>
               </ul>
             </li>
             <li><b>| 고객센터 |</b>
               <ul class="submenu">
-                <li>고객센터<br>
+                <li>| 고객센터 |<br><br>
                   AM 10:00 - PN 17:00<br>
                   토요일, 일요일, 공휴일 휴무<br>
                   02-2268-1152
@@ -883,7 +899,7 @@
                   trendit_cs@urbanisom.com
                 </a></li>
                 <li>
-                  은행정보<br>
+                  | 은행정보 |<br><br>
                   하나은행 115-910049-78004<br>
                   예금주 (주)어반데이터랩<br>
                 </li>
@@ -898,14 +914,26 @@
   
    <script>
     $(function() {
+      // day37_0225_fullpage > test11 참고 (직접짠 풀페이지 스크롤)
+
         $('#fullpage').fullpage({
             autoScrolling:true,
             scrollHorizontally: true,
             navigation:true,
             navigationPosition:'left',
             anchors:['section1','section2','section3','section4','section5','section6','section7','section8'],
+            afterLoad: function(origin, destination, direction){
+                console.log( destination);
+                if( destination == 8 ){
+                    $('.FOOTER').delay(500).animate({ 'bottom':0}, 1000)
+                }else{
+                    $('.FOOTER').animate({ 'bottom':'-380px'})
+            }// afterLoad End 
             // fixed header 설정
             //  특정하게 처리할일 생기면 
+            
+            
+          }
         });
     });
 
@@ -941,6 +969,51 @@
     }
     })
    
+
+    $(window).on( 'resize', function(){
+            var w = $(this).width();
+
+            if( w<=600){
+                //console.log( w )
+                // jQuery 작업 
+                $(function(){ 
+                $('.submenu').stop().slideUp();
+                // slide기본적으로 height를 기준으로 up/down
+                // css의 transition과 충돌 
+
+                $('b').on('click', function(){
+                $('.submenu').stop().slideUp();
+                $(this).next().stop().slideDown();
+                })
+                })
+            }else if(w>600){
+              $('.submenu').slideDown();
+            }
+            
+        })
+
+    
+        window.onload = function(){
+          $(window).trigger('resize');
+          // 윈도우 열기시 resize 이벤트 호출
+        }
+
+        //   var w = $(window).width();
+
+        //     if( w<=600){
+        //         $(function(){ 
+        //         $('.submenu').stop().slideUp();
+
+        //         $('b').on('click', function(){
+        //         $('.submenu').stop().slideUp();
+        //         $(this).next().stop().slideDown();
+        //         })
+        //         })
+        //     }else if(w>600){
+        //       $('.submenu').slideDown();
+        //     }
+            
+        // }
   
    </script>
 </body>
