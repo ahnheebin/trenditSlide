@@ -276,9 +276,9 @@
           .event:nth-child(4){display: none;}
 
       /* last page */
-      .section:nth-child(8){background-image: url(./img/background_1.jpg);
+      .section:nth-child(8){background-image: url(./img/background_2.jpg);
                                 background-repeat: no-repeat;
-                             background-position: 30px;}
+                             background-position: 30px; }
       /* footer */
           .FOOTER{position: fixed; bottom:0px; z-index: 1000;
             width: 2000px; height: 300px; left: 0; bottom: -300px; background-color: black; opacity: 0.85; }
@@ -390,6 +390,11 @@
           }
           .event{margin-right: 20px; margin-top: 20px;}
           .event:nth-child(3){display: none;}
+
+      /* last page */
+      .section:nth-child(8){background-image: url(./img/background_2.jpg);
+                                background-repeat: no-repeat;
+                             background-position: -860px 90px; transform: scale(0.80);}
 
       /* footer */
           
@@ -537,6 +542,11 @@
             .event:nth-child(4){display: block;
               margin-top: 290px; margin-left: 2px;}
 
+             /* last page */
+           .section:nth-child(8){background-image: url(./img/background_2.jpg);
+                                background-repeat: no-repeat;
+                             background-position: -450px 110px;}
+
               /* footer accordion*/
           .FOOTER{position: fixed; bottom:0px; z-index: 1000;
             width: 600px; height: 380px; left: 0; bottom: -380px;  background-color: black; }
@@ -549,12 +559,162 @@
           
           .submenu{ padding-top: 10px;}
           .submenu>li {margin-bottom: 10px; line-height: 15px;
-          font-size: 5px;}
+          font-size: 10px;}
         
         }
 
         @media screen and (max-width:480px){
+          /* header */
+          .header h1{display: none;}
+              header ul{ display: flex;  list-style: none; font-size: 16px; justify-content: center;
+              margin-left:-210px;}
+              
+            .Login{  margin-left: 385px; width: 80px;
+                margin-top: -50px;line-height: 1px;}
+            .Login li{ font-weight: 900; font-size: 12px; }
+            header ul{ display: flex;  list-style: none; font-size: 16px; justify-content: center;
+            margin-left:-10px; flex-direction: column;
+            margin-top: 100px; text-align: center;}
+           .Menu{display: none; background-color: #fff; width: 130px;}
+           .Menu a{background-image: none;  padding:5px; 
+            margin-left: 20px; text-align: center; 
+            /*  */  background: opacity(0.5);
+            border-radius: 5px; 
+            }
+            .Menu a:nth-child(1){padding-top: 0;}
+            .Menu span{ position: relative; z-index: 99999; display: block; text-align: center; width:90px;}
+            .subMenu{ margin-left: -80px; margin-top: -70px; background-color: black; color: #fff;height: 110px; z-index: 99;}
+            .subMenu a{line-height: 15px; border: none; 
+              margin-left: 0px; margin-top: 5px;}
 
+              /* hamburger */
+            .hamburger{display:block; 
+              margin-left: -350px;
+              margin-top: 30px;            
+           }
+               /* section */
+            .section h1{font-size: 70px;  margin-top: 0px; margin-left: 130px; 
+                font-family: "Jost Regular"; margin-bottom: 45px; }
+            .section h3{font-size: 45px; margin-top: -5px; margin-left: 60px; font-family: "Jost Regular";}
+            .Video{width: 20%; border: 1px solid black;  margin-top: -60px; margin-left: 65px; }
+      
+          /* section:nth-child(2)  NEW */
+            .content{display: flex;}
+            .NEW h1{margin-top: 30px; margin-left: 93px; font-size: 130px;}
+            .NEW h2{ width: 295px; margin-top: 185px; margin-left: -295px;}
+            .NEW h4{margin-left: -220px; margin-top: 190px; font-size: 30px; z-index: 99;
+             font-family: "Jost Bold"; background-image: url(./img/arrow_R.png); 
+             width: 150px;
+             background-repeat: no-repeat; background-size: 15%; background-position: 125px 11px;
+            }
+          
+            .swiper {
+            width: 100%;
+            height: 60%;
+            margin-left: -710px;
+            }
+     
+
+            .swiper-wrapper{
+            width: 100%;
+            margin-top: 5px;
+            height: 645px;
+            }
+            .swiper-pagination{margin-bottom:95px; margin-left: 0px;}
+
+            /* SALE */
+            .SALE h1{margin-top: 30px; margin-left: 110px; font-size: 130px;}
+            .SALE h2{ width: 280px; margin-top: 185px; margin-left: -285px;}
+            .SALE h4{margin-left: -210px; margin-top: 190px; font-size: 30px; z-index: 99;
+             font-family: "Jost Bold"; 
+             width: 150px;
+             background-repeat: no-repeat; background-size: 15%; background-position: 125px 11px;
+            }
+
+          /* ITEM */
+            .ITEM h1{margin-top: 30px; margin-left: 110px; font-size: 130px;}
+            .ITEM h2{ width: 265px; margin-top: 185px; margin-left: -265px;}
+            .ITEM h4{margin-left: -210px; margin-top: 190px; font-size: 30px; z-index: 99;
+             font-family: "Jost Bold"; 
+             width: 150px;
+             background-repeat: no-repeat; background-size: 15%; background-position: 125px 11px;
+            }
+
+
+            /* ABOUT */
+            .ABOUT h1{margin-top: 30px; margin-left: 100px; font-size: 100px;}
+            .ABOUT h2{ width: 330px; margin-top: 170px; margin-left: -320px;}
+            .ABOUTcontent{display: block;}
+            .ABOUT h4{margin-left:55px; margin-top: 20px; font-size: 28px; display:block; line-height: 45px; font-family:"Jost bold";
+            }
+            .ABOUT h4 b{font-family: "Jost black"; font-size: 30px; }
+            .ABOUT h4:hover{transform: scale(0.97);margin-left:35px;}
+            .ABOUT h4 b:hover{color:#1b95e9;}
+            .Video2{width: 20%; border: 1px solid black;  margin-top: 1px; margin-left: 70px; }  
+            .ABOUT h3{display: none;}
+            
+          /* NOTICE */
+            .NOTICE h1{margin-top: 100px; margin-left: 80px; font-size: 100px;}
+            .NOTICE h2{ width: 345px; margin-top: 230px; margin-left: -345px;}
+            .NOTICE h4{margin-left: -250px; margin-top: 240px; font-size: 30px; z-index: 99;
+             font-family: "Jost Bold"; 
+             width: 150px;
+             background-repeat: no-repeat; background-size: 15%; background-position: 125px 11px;
+            }
+            .notice img{
+              display: block;
+              width: 180px;
+              height: 180px;   
+              border: 1px solid black;
+              }
+              .notice{margin-right: 10px;}
+              .notice:nth-child(1){margin-left: -60px; margin-top: 10px;}
+              .notice:nth-child(2){margin-top: 10px;}
+              .notice:nth-child(3){display:block;
+               margin-top: 255px; margin-left: -380px;}
+              .notice:nth-child(4){display: block;
+              margin-top: 255px; margin-left: 2px;}
+
+              /* EVENT */
+            .EVENT h1{margin-top: 100px; margin-left: 100px; font-size: 100px;}
+            .EVENT h2{ width: 300px; margin-top: 230px; margin-left: -300px;}
+            .EVENT h4{ margin-left: -225px; margin-top: 240px; font-size: 30px; z-index: 99;
+             font-family: "Jost Bold"; 
+             width: 150px;
+             background-repeat: no-repeat; background-size: 15%; background-position: 125px 11px;
+            }
+            .event img{
+            display: block;
+            width: 180px;
+            height: 180px;   
+            border: 1px solid black;
+            }
+            .event{margin-right: 10px;}
+            .event:nth-child(1){margin-left: -60px; margin-top: 10px;}
+            .event:nth-child(2){margin-top: 10px;}
+            .event:nth-child(3){display:block;
+               margin-top: 270px; margin-left: -385px;}
+            .event:nth-child(4){display: block;
+              margin-top: 270px; margin-left: 2px;}
+
+           /* last page */
+           .section:nth-child(8){background-image: url(./img/background_3.jpg);
+                                background-repeat: no-repeat;
+                             background-position: -210px 30px; }
+
+              /* footer accordion*/
+          .FOOTER{position: fixed; bottom:0px; z-index: 1000;
+            width: 600px; height: 380px; left: 0; bottom: -380px;  background-color: black; }
+          .footer{ color: #fff; 
+          padding:20px; margin-left: -160px; text-align: center;}
+          .footer>ul>li>b{font-size: 15px; }
+          .footer>ul>li{margin-bottom: 15px;}
+          .footer>ul{display: block;align-content: space-between;
+          }
+          
+          .submenu{ padding-top: 10px;}
+          .submenu>li {margin-bottom: 10px; line-height: 15px;
+          font-size: 10px;}
         }
     </style>    
 </head>
@@ -599,7 +759,7 @@
     <div id="fullpage">
         <div class="section">
             <h1>TRENDIT</h1>
-            <video class="Video" controls="controls" autoplay>
+            <video class="Video" controls="controls" autoplay loop>
                 <source src="./video/2021 TRENDIT SUMMER FILM.mp4" type="video/mp4">
             </video>
             <h3>FASHION DATA LAB</h3>
@@ -775,8 +935,8 @@
                 </div>
 
                 <div class="ABOUTcontent">
-                    <video class="Video2" controls="controls" autoplay>
-                        <source src="./video/trendit.mp4" type="video/mp4">
+                    <video class="Video2" controls="controls" poster="./img/about.jpg">
+                        <source src="./video/trendit.mp4" controls loop>
                     </video>
                     <h3><a href="https://trenditstore.com/about/">최신트렌드를<br>추천해주는<br><b>SHOP<br> TRENDIT</b><br>알아보러가기 ></a></h3>
                     <h4><a href="https://trenditstore.com/about/">&nbsp;&nbsp;&nbsp; 최신트렌드를 추천해주는<br><b>SHOP TRENDIT</b>  보러가기 ></a></h4>
